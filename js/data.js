@@ -22,7 +22,7 @@ export const mainLinks = [
 export const projects = [
     {
         title: "SpiderVerse",
-        imageUrl: "./assets/SpiderVerse-thumbnail.png",
+        imageUrl: "./assets/spiderverse-thumbnail.png",
         link: "https://github.com/AndreBauzil/SpiderVerse-React",
         technologies: ["TypeScript", "SCSS", "NextJS", "React"],
     },
