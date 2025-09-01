@@ -15,11 +15,23 @@ export const socialLinks = [
 ];
 
 export const mainLinks = [
-    { text: 'Ver meu Currículo', url: './assets/Currículo - Andre Bauzil.pdf', icon: 'file-text', download: true },
+    { text: 'Ver meu Currículo', url: './assets/Currículo - Andre Bauzil - V4.pdf', icon: 'file-text', download: true },
     { text: 'Ir para o Portfólio no GitHub', url: 'https://github.com/AndreBauzil?tab=repositories', icon: 'briefcase' }
 ];
 
 export const projects = [
+    {
+        title: "TCC - Domestic Services",
+        imageUrl: "./assets/domestik-thumbnail.jpg",
+        link: "https://github.com/AndreBauzil/",
+        technologies: ["TypeScript", "JavaScript", "React-Native", "NodeJS"],
+    },
+    {
+        title: "Habits",
+        imageUrl: "./assets/habits-thumbnail.png",
+        link: "https://github.com/AndreBauzil/Habits",
+        technologies: ["TypeScript", "React-Native", "NodeJS", "Expo"],
+    },
     {
         title: "SpiderVerse",
         imageUrl: "./assets/SpiderVerse-thumbnail.png",
