@@ -1,6 +1,7 @@
-# DevLinks
+# DevLinks 
 
-![DevLinks Project](.github/preview.jpg)
+### (Initial Concept)
+![DevLinks Project](.github/preview.webp)
 
 ## Table of Contents <!-- omit in toc -->
 
