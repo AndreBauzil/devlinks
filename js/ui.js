@@ -46,26 +46,54 @@ const renderMainLinks = () => {
 };
 
 const renderProjects = () => {
-    renderComponent(elements.projectList, projects, project => {
-        const techTags = project.technologies
-            .map(tech => `<span class="inline-block bg-violet-100 text-violet-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-violet-900/70 dark:text-violet-300">${tech}</span>`)
-            .join(' ');
-        
-        return `
-            <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-card block bg-white/80 dark:bg-gray-800/80 rounded-lg overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 group backdrop-blur-sm">
-                <div class="overflow-hidden">
-                     <img src="${project.imageUrl}" alt="Thumbnail do projeto ${project.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/FFF?text=Imagem+Indisponível';">
-                </div>
-                <div class="p-5">
-                    <h3 class="text-xl font-bold text-gray-900 dark:text-white">${project.title}</h3>
-                    <div class="flex flex-wrap gap-2 mt-4">
-                        ${techTags}
-                    </div>
-                </div>
-            </a>
-        `;
-    });
-};
+    const featuredProjects = projects.slice(0, 3);
+    const otherProjects = projects.slice(3);
+  
+    // Renderiza a seção de destaques
+    const featuredContainer = document.getElementById('featured-project-list');
+    renderComponent(featuredContainer, featuredProjects, projectToHTML);
+  
+    // Renderiza a seção de outros projetos
+    const otherContainer = document.getElementById('project-list');
+    renderComponent(otherContainer, otherProjects, projectToHTML);
+  };
+  
+  const projectToHTML = (project) => {
+    const techTags = project.technologies
+      .map(tech => `<span class="inline-block bg-violet-100 text-violet-800 text-xs font-medium px-2.5 py-1 rounded-full dark:bg-violet-900/70 dark:text-violet-300">${tech}</span>`)
+      .join(' ');
+  
+    const linksHTML = `
+      <div class="mt-6 flex flex-wrap gap-4">
+        ${project.liveUrl ? `
+          <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-violet-600 text-white font-semibold rounded-lg hover:bg-violet-700 transition-colors flex items-center justify-center gap-2">
+            <i data-lucide="external-link" class="w-4 h-4"></i>
+            Ver ao Vivo
+          </a>
+        ` : ''}
+        <a href="${project.repoUrl}" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-gray-600/50 text-gray-800 dark:text-gray-200 font-semibold rounded-lg hover:bg-gray-700/60 transition-colors flex items-center justify-center gap-2">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          Código
+        </a>
+      </div>
+    `;
+  
+    return `
+      <div class="project-card flex flex-col bg-white/80 dark:bg-gray-800/80 rounded-lg overflow-hidden shadow-md border border-gray-200 dark:border-gray-700 backdrop-blur-sm h-full">
+        <a href="${project.liveUrl || project.repoUrl}" target="_blank" rel="noopener noreferrer" class="block overflow-hidden">
+          <img src="${project.imageUrl}" alt="Thumbnail do projeto ${project.title}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300" onerror="this.onerror=null;this.src='https://placehold.co/600x400/333/FFF?text=Imagem+Indisponível';">
+        </a>
+        <div class="p-5 flex flex-col flex-grow">
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white">${project.title}</h3>
+          <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm flex-grow">${project.description || ''}</p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            ${techTags}
+          </div>
+          ${linksHTML}
+        </div>
+      </div>
+    `;
+  };
 
 // --- Lógica de Tema ---
 
