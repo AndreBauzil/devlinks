@@ -38,14 +38,22 @@ export const projects = [
         repoUrl: "https://github.com/AndreBauzil/python-job-scraper", 
     },
     {
+        title: "Travel Dashboard",
+        imageUrl: "./assets/projects/travel-panel-thumbnail.webp",
+        description: "Assistente de viagem inteligente com arquitetura BFF em Rails, consumindo 4 APIs (Clima, Wikipedia, IA Gemini, Locais) e exibindo em um painel React/Mantine.",
+        technologies: ["React", "TypeScript", "Mantine", "Ruby on Rails", "API", "RubyLLM"],
+        liveUrl: "https://travel-panel-frontend.onrender.com",
+        repoUrl: "https://github.com/AndreBauzil/travel-panel",
+    },
+    // --- OUTROS ---
+    {
         title: "SpiderVerse",
         imageUrl: "./assets/projects/spiderverse-thumbnail.webp",
         description: "Uma landing page imersiva e estilizada com o tema do filme 'Homem-Aranha no Aranhaverso', focada em animações e design responsivo com Next.js.",
         technologies: ["Next.js", "React", "TypeScript", "SCSS"],
-        liveUrl: "https://spider-verse-react-five.vercel.app/",
+        liveUrl: "https://spiderverse-react.vercel.app",
         repoUrl: "https://github.com/AndreBauzil/SpiderVerse-React",
     },
-    // --- OUTROS ---
     {
         title: "TCC - Domestic Services",
         imageUrl: "./assets/projects/domestik-thumbnail.webp",
