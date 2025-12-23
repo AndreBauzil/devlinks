@@ -22,20 +22,20 @@ export const mainLinks = [
 export const projects = [
     // --- DESTAQUE ---
     {
+        title: "FinTrack (SaaS Financeiro)",
+        imageUrl: "./assets/projects/fintrack-thumbnail.webp", // Lembre de criar essa imagem!
+        description: "Plataforma completa de gestão financeira com suporte a múltiplas carteiras (multi-tenancy), gráficos interativos, modo privacidade e autenticação segura. Inclui Landing Page institucional e Dashboard protegido.",
+        technologies: ["Next.js 14", "TypeScript", "Supabase", "Tailwind CSS", "Shadcn UI", "Recharts"],
+        liveUrl: "https://fintrack-lake.vercel.app",
+        repoUrl: "https://github.com/AndreBauzil/fintrack",
+    }, 
+    {
         title: "Barbearia do Dev (Micro-SaaS)",
         imageUrl: "./assets/projects/barbearia-thumbnail.webp", 
         description: "Sistema de agendamento full-stack para barbearias, com dashboard administrativo, analytics de faturamento e gestão de horários. Construído com uma API RESTful em Node.js e frontend em React.",
         technologies: ["React", "Node.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
         liveUrl: "https://micro-saas-barbearia.vercel.app/",
         repoUrl: "https://github.com/AndreBauzil/microSAAS-barbearia",
-    },
-    {
-        title: "Job Scraper & Analytics",
-        imageUrl: "./assets/projects/jobscraper-thumbnail.webp",
-        description: "Sistema de automação que coleta vagas de emprego do LinkedIn usando Playwright, serve os dados via uma API em Python (FastAPI) e exibe em um dashboard interativo com filtros e gráficos.",
-        technologies: ["Python", "FastAPI", "Playwright", "React", "TypeScript", "SQLModel", "Recharts"],
-        liveUrl: "https://python-job-scraper-five.vercel.app",
-        repoUrl: "https://github.com/AndreBauzil/python-job-scraper", 
     },
     {
         title: "Travel Dashboard",
@@ -46,6 +46,14 @@ export const projects = [
         repoUrl: "https://github.com/AndreBauzil/travel-panel",
     },
     // --- OUTROS ---
+    {
+        title: "Job Scraper & Analytics",
+        imageUrl: "./assets/projects/jobscraper-thumbnail.webp",
+        description: "Sistema de automação que coleta vagas de emprego do LinkedIn usando Playwright, serve os dados via uma API em Python (FastAPI) e exibe em um dashboard interativo com filtros e gráficos.",
+        technologies: ["Python", "FastAPI", "Playwright", "React", "TypeScript", "SQLModel", "Recharts"],
+        liveUrl: "https://python-job-scraper-five.vercel.app",
+        repoUrl: "https://github.com/AndreBauzil/python-job-scraper", 
+    },
     {
         title: "SpiderVerse",
         imageUrl: "./assets/projects/spiderverse-thumbnail.webp",
