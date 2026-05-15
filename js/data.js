@@ -67,6 +67,7 @@ export const projects = [
         imageUrl: "./assets/projects/domestik-thumbnail.webp",
         description: "Aplicação mobile (Android/iOS) para conectar prestadores de serviços domésticos e clientes. Desenvolvido como Trabalho de Conclusão de Curso.",
         technologies: ["React-Native", "NodeJS", "TypeScript"],
+        liveUrl: "https://domestik-web.vercel.app",
         repoUrl: "https://github.com/AndreBauzil/TCC",
     },
     {
